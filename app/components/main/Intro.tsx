@@ -1,17 +1,14 @@
 'use client'
-import localFont from 'next/font/local'
+
 import Image from 'next/image';
 import smallWheel from '@/public/unfold/63e04ac26af00b1fba5f9e5e_startup star.svg'
 import { useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { motion } from 'framer-motion'
+import myfont from '@/app/fonts/fontfile';
 
 
-const myfont = localFont({
-    src: '../../fonts/FKDisplayTrial-Regular.otf',
-    display: 'swap',
-    variable: '--font-anthro'
-})
+
 const Intro = () => {
     const date = new Date()
     let hours = date.getHours();
@@ -57,7 +54,7 @@ const Intro = () => {
                         <span className=' leading-[1] uppercase text-[1em] font-[400] tracking-[-0.02em]'>
                             {strTime}
                         </span>
-                        " EST"
+                        " IST"
                     </div>
                     <div className={`leading-[1.4] font-[400] text-[0.75em] ${myfont.variable} font-fk `}>
                         Servicing Earth
