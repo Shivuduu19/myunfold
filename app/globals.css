@@ -5,7 +5,9 @@
 
 
 
-
+html {
+  margin: 0;
+}
 
 
 body {
@@ -14,6 +16,8 @@ body {
   scroll-behavior: auto;
   font-size: 1.1111111111111112vw;
   background-color: #e8f0f9;
+  color: #05070f;
+  line-height: 1;
 }
 
 body::-webkit-scrollbar {

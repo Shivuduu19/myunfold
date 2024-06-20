@@ -26,11 +26,11 @@ const page = () => {
     return (
         <>
 
-            <NavBar />
+            {/* <NavBar /> */}
             <div>
                 <Header />
                 <div className='w-full max-w-[1700px] mx-auto px-[4.375em]'>
-                    <div className='flex flex-col gap-[6.25em] mb-4.5em] relative '>
+                    <div className='flex flex-col gap-[6.25em] betmt:mt-[7em] tablet:mt-[4.5em] tablet:mb-[4.5em] mb-4.5em] relative '>
                         <div className='flex justify-between items-end gap-[1.5em]'>
                             <div className='w-[55em]'>
                                 <h1 className={` ${myfont.variable} font-fk tracking-[-.04em] text-[10em] font-normal leading-[.9] my-0`}>Our
@@ -45,7 +45,7 @@ const page = () => {
                                 <WorkCom src={unsplash} title={'Wonder Dynamics'} />
                                 <WorkCom src={safepal} title={'SafePal'} />
                                 <WorkCom src={lamar} title={'Lamar'} />
-                                <WorkCom src={tavus} title={'Tavus'} />
+                                <WorkCom src={tavus} title={'Tavus'} />s
                                 <WorkCom src={mighty} title={'Mighty'} />
                                 <WorkCom src={lmnft} title={'LMNFT'} />
                                 <WorkCom src={rumble} title={'Rumble'} />

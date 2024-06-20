@@ -49,8 +49,8 @@ const Header = () => {
 
             <div className='w-full max-w-[1700px] px-[4.375em]'>
 
-                <motion.div className='flex justify-between w-full h-full items-center'>
-                    <motion.a whileHover='hover' href="" className='w-[9.7em] max-w-full flex relative'>
+                <motion.div className='flex betmt:h-auto justify-between w-full h-full items-center'>
+                    <motion.a whileHover='hover' href="" className=' mobile:w-[22em] betmt:w-[15em] w-[9.7em] max-w-full flex relative'>
                         <Image src={logo} alt='' className='z-[2] relative' />
                         <div className='absolute left-[0%]  w-[30%] h-[150%] bottom-[0.2em] rounded-b-[100vw] flex flex-col overflow-hidden '>
                             <motion.div variants={headAnim} style={{ y: '75%' }} className='  w-full'>
@@ -61,15 +61,15 @@ const Header = () => {
                             </motion.div>
                         </div >
                     </motion.a>
-                    <motion.a whileHover='hover' className='flex flex-none w-[11.5em] items-end justify-end h-[5.75em] relative overflow-hidden  rounded-b-[100vw]  max-w-full  '>
+                    <motion.a whileHover='hover' className='flex flex-none betmt:w-[20em] betmt:h-[8em] w-[11.5em] items-end justify-end h-[5.75em] relative overflow-hidden  rounded-b-[100vw]  max-w-full  '>
                         <div className='z-[1] bg-[#31f7c8] flex-none  h-full w-full rounded-b-[100vw] flex flex-col items-center pt-[2em] relative translate-x-full '>
                             <div className='translate-y-full'>
-                                <motion.div variants={InsideText} className='tracking-[-0.02em] uppercase text-[1em] font-[400] leading-[1] opacity-0'>Let's Chat</motion.div>
+                                <motion.div variants={InsideText} className='betmt:text-[2.4em] tablet:text-[1.4em] tracking-[-0.02em] uppercase text-[1em] font-[400] leading-[1] opacity-0 '>Let's Chat</motion.div>
                             </div>
                         </div>
                         <motion.div variants={headeryellowAnim} transition={{ duration: 0.3, }} className='z-[2] bg-[#f6fa5e]  rounded-[100vw] flex-none w-full h-[200%] relative '></motion.div>
-                        <motion.div variants={outsideText} className='absolute flex flex-col items-center z-[3] w-full top-[2rem]'>
-                            <div className='tracking-[-0.02em] uppercase text-[1em] font-[400] leading-[1]'>
+                        <motion.div variants={outsideText} className='betmt:top-[3.1em] absolute flex flex-col items-center z-[3] w-full top-[2em]'>
+                            <div className='betmt:text-[2.4em] tablet:text-[1.4em] tracking-[-0.02em] uppercase text-[1em] font-[400] leading-[1] tablet:'>
                                 Let's Chat
                             </div>
                         </motion.div>

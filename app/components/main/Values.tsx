@@ -14,7 +14,7 @@ const Values = () => {
                     <p className={`${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] my-0`}>Your brand isn’t an aesthetic. It’s a living organism. We help it thrive by bringing a dynamic perspective and collaborative expertise to everything we build.</p>
                 </div>
                 <div className='text-right w-[30em] max-w-full'>
-                    <h2 className='tracking-[0.02em] text-[7.5em] font-normal  leading-[1] my-0'>Beyond Design</h2>
+                    <h2 className='tracking-[-.02em] text-[7.5em] font-normal  leading-[1] my-0'>Beyond Design</h2>
                 </div>
             </div>
             <div className='grid mb-[6.5em] auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto_auto] gap-x-[1.5em] gap-y-[1.5em]'>

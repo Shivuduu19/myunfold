@@ -1,7 +1,8 @@
 import Image from "next/image"
 import greenCircle from '@/public/unfold/63e1e17ef3d2d0d1c6b0e561_green circle.svg'
-import myfont from "@/app/fonts/fontfile"
+import myfont, { myfoldAlt, myfontGrotesk } from "@/app/fonts/fontfile"
 import coffee from '@/public/unfold/640b86c26276f0736b64eb13_coffee.svg'
+import FooterExpand from "../FooterExpand"
 
 
 const Footer = () => {
@@ -28,10 +29,12 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
+
             <div className="px-[11em] w-full max-w-[1700px] mx-auto">
-                <div className="flex justify-between items-stretch mb-[5.5em] ">
-                    <div className="w-[42em] relative">
-                        <p className='tracking-[-0.02em] text-[2.5em] font-normal leading-[1.2] my-0'>
+                <div className="flex justify-between betmt:flex-col betmt:gap-[9em] items-stretch mb-[5.5em] ">
+                    <div className="w-[42em] betmt:w-auto relative">
+                        <p className='tracking-[-0.02em] mobile:text-[5em] betmt:text-[3.4em]   text-[2.5em] font-normal leading-[1.2] my-0'>
                             We’re Unfold. A collective bunch working on incredible projects and building enduring partnerships that extend well beyond the deliverable.
                             <br />
                             <br />
@@ -41,23 +44,23 @@ const Footer = () => {
                             <br />
                             talented team? Hit us up!
                         </p>
-                        <Image src={greenCircle} alt="" className="w-[9.6875em] absolute top-[-1.1em] left-[6.7em] bottom-auto right-auto" />
+                        <Image src={greenCircle} alt="" className="w-[9.6875em] mobile:w-[18em] mobile:left-[12.8em] betmt:w-[14em] betmt:top-[-2em] betmt:left-[7.9em] absolute top-[-1.1em] left-[6.7em] bottom-auto right-auto" />
                     </div>
                     <div className="flex flex-col gap-[2.5em]">
                         <div className="flex flex-col items-start gap-[0em]">
-                            <a href="https://dribbble.com/unfold" target="_blank" className={`transition-colors duration-[0.3] ${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] `}>Dribbble</a>
-                            <a href="https://www.instagram.com/unfoldco/" target="_blank" className={`transition-colors duration-[0.3] ${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] `}>Instagram</a>
-                            <a href="https://x.com/unfoldco/" target="_blank" className={`transition-colors duration-[0.3] ${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] `}>X</a>
-                            <a href="https://www.facebook.com/unfold/" target="_blank" className={`transition-colors duration-[0.3] ${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] `}>Facebook</a>
-                            <a href="https://www.linkedin.com/company/unfold-design-agency" target="_blank" className={`transition-colors duration-[0.3] ${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] `}>LinkedIn</a>
+                            <a href="https://dribbble.com/unfold" target="_blank" className={`transition-colors duration-[0.3] ${myfontGrotesk.variable} font-grotesk mobile:text-[4em] betmt:text-[2.5em] tablet:text-[1.6em] text-[1.125em] font-normal leading-[1.3] `}>Dribbble</a>
+                            <a href="https://www.instagram.com/unfoldco/" target="_blank" className={`transition-colors duration-[0.3] ${myfontGrotesk.variable} font-grotesk   mobile:text-[4em] betmt:text-[2.5em] tablet:text-[1.6em] text-[1.125em] font-normal leading-[1.3] `}>Instagram</a>
+                            <a href="https://x.com/unfoldco/" target="_blank" className={`transition-colors duration-[0.3] ${myfontGrotesk.variable} font-grotesk text-[1.125em] mobile:text-[4em] betmt:text-[2.5em] tablet:text-[1.6em] font-normal leading-[1.3] `}>X</a>
+                            <a href="https://www.facebook.com/unfold/" target="_blank" className={`transition-colors duration-[0.3] ${myfontGrotesk.variable} font-grotesk text- [1.125em] mobile:text-[4em] betmt:text-[2.5em] tablet:text-[1.6em] font-normal leading-[1.3] `}>Facebook</a>
+                            <a href="https://www.linkedin.com/company/unfold-design-agency" target="_blank" className={`transition-colors duration-[0.3] ${myfontGrotesk.variable} font-grotesk text-[1.125em] mobile:text-[4em] betmt:text-[2.5em] tablet:text-[1.6em] font-normal leading-[1.3] `}>LinkedIn</a>
                         </div>
                         <div className="flex flex-col items-start gap-[0em]">
-                            <a href="https://www.unfold.co/work" target="_blank" className={`transition-colors duration-[0.3] ${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] `}>Work</a>
-                            <a href="https://www.unfold.co/about" target="_blank" className={`transition-colors duration-[0.3] ${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] `}>About</a>
+                            <a href="https://www.unfold.co/work" target="_blank" className={`transition-colors duration-[0.3] ${myfontGrotesk.variable} font-grotesk mobile:text-[4em] betmt:text-[2.5em] tablet:text-[1.6em] text-[1.125em] font-normal leading-[1.3] `}>Work</a>
+                            <a href="https://www.unfold.co/about" target="_blank" className={`transition-colors duration-[0.3] ${myfontGrotesk.variable} font-grotesk text-[1.125em] mobile:text-[4em] betmt:text-[2.5em] tablet:text-[1.6em] font-normal leading-[1.3] `}>About</a>
 
                         </div>
                         <div className="flex flex-col items-start gap-[0em]">
-                            <a href="https://goo.gl/maps/1Zif41pPimsmDZgB8" target="_blank" className={`transition-colors duration-[0.3] ${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] `}>Unfold HQ
+                            <a href="https://goo.gl/maps/1Zif41pPimsmDZgB8" target="_blank" className={`transition-colors duration-[0.3] ${myfontGrotesk.variable} font-grotesk text-[1.125em] mobile:text-[4em] betmt:text-[2.5em] tablet:text-[1.6em] font-normal leading-[1.3] `}>Unfold HQ
                                 <br />
                                 5920 Pan American Blvd
                                 <br />
@@ -71,33 +74,12 @@ const Footer = () => {
 
                 </div>
             </div>
-            <div className="w-full max-w-[1700px] mx-auto px-[4.375em]">
-                <a href="https://www.unfold.co/contact" className="text-[#05070f] flex justify-center items-center mb-[5.5em] py-[4em] px-[5em] relative max-w-full">
-                    <div className="z-[2] flex flex-col gap-[1.5em] flex-1 relative">
-                        <h2 className="relative left-[-1.1%] tracking-[-0.04em] text-[10em] font-normal leading-[.9 my-0]">Let's Chat</h2>
-                        <p className="tracking-[.02em] text-[1.75em] font-normal leading-[1.2] my-0">Want to grab a virtual coffee and talk about your project?</p>
-
-                    </div>
-                    <div className="z-[2] flex flex-col items-center justify-center relative w-[14em] h-[14em]">
-                        <Image src={coffee} alt="" className="w-[170%] hidden absolute " />
-                        <div className="flex  flex-col items-center justify-center  z-[2] bg-[#fff] rounded-[100vw] relative w-[13em] h-[13em]">
-                            <div className="w-[55%]">
-                                <svg width=" 100%" height=" 100%" viewBox="0 0 106 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M65.0781 81.0233C65.0781 58.9191 82.9972 41 105.101 41" stroke="currentColor" stroke-width="2" data-darkreader-inline-stroke="" ></path>
-                                    <path d="M65.0781 0.97666C65.0781 23.0809 82.9972 41 105.101 41" stroke="currentColor" stroke-width="2" data-darkreader-inline-stroke="" ></path>
-                                    <path d="M99.8203 41L0.894692 41" stroke="currentColor" stroke-width="2" data-darkreader-inline-stroke="" ></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="absolute z-[1] w-full h-full rounded-[3em] bg-[#f6fa5e]"></div>
-                </a>
-            </div>
+            <FooterExpand />
 
             <div className="w-full max-w-[1700px] px-[11em] mb-[5.5em] mx-auto">
-                <div className="flex flex-col gap-[2.5em] items-start w-[20em] ">
-                    <div className="flex gap-[.75em] rounded-[100vw] items-center p-[1em] bg-[#21242c]">
-                        <div className="w-[1.5em] h-[1.5em]">
+                <div className="flex flex-col betmt:w-auto tablet:w-[40em] gap-[2.5em] items-start w-[20em] ">
+                    <div className="flex gap-[.75em] mobile:gap-[2em] mobile:py-[2.5em] mobile:px-[4em] betmt:px-[3em] tablet:gap-[1.1em] tablet:py-[1.5em] tablet:px-[2em] rounded-[100vw] items-center p-[1em] bg-[#21242c]">
+                        <div className="w-[1.5em] h-[1.5em] mobile:w-[1.2em] mobile:h-[1.2em] betmt:h-[1.5em] betmt:w-[1.5em] betmt:text-[18px] tablet:w-[2.5em] tablet:h-[2.5em]">
                             <svg width=" 100%" height=" 100%" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_3426_100906)">
                                     <path d="M21.9259 11.24C21.9259 16.95 17.2959 21.58 11.5859 21.58C5.87586 21.58 1.25586 16.95 1.25586 11.24H21.9259Z" stroke="currentColor" stroke-miterlimit="10"></path>
@@ -113,16 +95,16 @@ const Footer = () => {
                                 </defs>
                             </svg>
                         </div>
-                        <p className={`${myfont.variable} font-fk text-[.875em] font-normal leading-[1.4]`}> offline</p>
-                        <div className="rounded-[100vw] w-[.75em] h-[.75em] bg-[#ff0055]"></div>
+                        <p className={`${myfontGrotesk.variable} font-grotesk text-[.875em] mobile:text-[3.4em] betmt:text-[2.2em] tablet:text-[1.3em] font-normal leading-[1.4]`}> Offline</p>
+                        <div className="rounded-[100vw] mobile:w-[2em] mobile:h-[2em] betmt:w-[1em] betmt:h-[1em] w-[.75em] h-[.75em] bg-[#ff0055]"></div>
 
                     </div>
-                    <p className={`${myfont.variable} font-fk text-[1.125em] font-normal leading-[1.3] my-0`}>Your company is ready for big moves and we are here for it. Turn bold ideas into an impactful brand.</p>
+                    <p className={`${myfontGrotesk.variable} font-grotesk text-[1.125em] font-normal mobile:text-[4em] betmt:text-[2.5em] tablet:text-[1.6em] leading-[1.3] my-0`}>Your company is ready for big moves and we are here for it. Turn bold ideas into an impactful brand.</p>
                 </div>
             </div>
 
             <div className="w-full max-w-[1700px]  mx-auto px-[4.375em] overflow-hidden">
-                <p className="text-center tracking-[-.04em] whitespace-nowrap flex flex-col items-center mb-[-.235em] ml-[-1.6%] text-[29.1em] leading-[0.9] mt-0">Unfold</p>
+                <p className={` ${myfoldAlt.variable} font-fkAlt text-center tracking-[-.04em] whitespace-nowrap flex flex-col items-center mb-[-.279em] ml-[-1.6%] text-[29.1em] leading-[0.9] mt-0`}>Unfold</p>
 
             </div>
 

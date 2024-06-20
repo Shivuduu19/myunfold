@@ -10,19 +10,19 @@ import Footer from '../components/main/Footer'
 const page = () => {
     return (
         <div>
-            <NavBar />
+            {/* <NavBar /> */}
             <div className='w-full'>
                 <Header />
                 <div className='w-full max-w-[1700px] mx-auto px-[4.375em]' >
-                    <div className='flex justify-between items-end mb-[4.5em] gap-[1.5em]'>
-                        <div className='w-[55em]'>
-                            <h1 className={` ${myfont.variable} font-fk tracking-[-.04em] text-[9em] font-normal leading-[.9] my-0`} >
+                    <div className='flex justify-between items-end mb-[4.5em] betmt:mt-[7em] tablet:mt-[4.5em] gap-[6.25em]'>
+                        <div className='w-[55em] betmt:w-auto'>
+                            <h1 className={` ${myfont.variable} font-fk tracking-[-.04em] text-[10em] font-normal leading-[.9] my-0`} >
                                 Pioneering
                                 <br />
                                 forward.
                             </h1>
                             <div className='mt-[2.5em]'>
-                                <p className='tracking-[-.02em] text-[1.5em] font-normal leading-[1.2] '>
+                                <p className='tracking-[-.02em] text-[1.5em] mobile:text-[4.3em] betmt:text-[2.8em] font-normal leading-[1.2] '>
                                     We are a collective network of like-minded builders, designers and explorers. From consulting, to design and development and motion and marketing.
                                     <br />
                                     <br />
@@ -45,7 +45,7 @@ const page = () => {
                         Collective.
                     </h1>
                     <div className='mt-[48px] mb-[2.5em]'>
-                        <div className='grid auto-cols-[1fr] grid-cols-[1fr_1fr_1fr] grid-rows-[auto] gap-x-[2.5em] gap-y-[2.5em]'>
+                        <div className='grid auto-cols-[1fr] betmt:grid-cols-[1fr] tablet:grid-cols-[1fr_1fr]  grid-cols-[1fr_1fr_1fr] grid-rows-[auto] gap-x-[2.5em] gap-y-[2.5em]'>
 
                             <CollectiveGroup />
 

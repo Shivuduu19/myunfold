@@ -11,7 +11,7 @@ import Footer from './Footer'
 
 const Main = () => {
     return (
-        <div className=''>
+        <div className='w-full overflow-hidden'>
             <Header />
             <div className='max-w-[1700px] w-full mx-auto px-[4.375em]'>
 

@@ -7,9 +7,17 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      'tablet': { 'max': '991px' },
+      'betmt': { 'max': '767px' },
+      'mobile': { 'max': '479px' },
+    },
     extend: {
       fontFamily: {
-        fk: ['var(--font-fk)']
+        fk: ['var(--font-fk)'],
+        fkAlt: ['var(--font-fkAlt)'],
+        grotesk: ['var(--font-grotesk)'],
+
       }
       ,
       backgroundImage: {
