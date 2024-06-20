@@ -32,7 +32,7 @@ const NavBar = () => {
     useEffect(() => {
         // Update indicator size on initial render and link clicks
         const updateIndicatorSize = () => {
-            const activeLinkRef = itemsRef.current.find((ref) => ref.pathname === activeLink);
+            const activeLinkRef: HTMLAnchorElement | undefined = itemsRef.current.find((ref) => ref.pathname === activeLink);
             console.log(activeLinkRef?.getBoundingClientRect());
             setElement(activeLinkRef)
 
@@ -42,9 +42,13 @@ const NavBar = () => {
                 const { width, left } = activeLinkRef.getBoundingClientRect();
                 console.log(width, left);
                 console.log(activeLinkRef?.parentElement?.getBoundingClientRect().left);
+                let parentleft: number = 0
+                if (activeLinkRef.parentElement) {
+                    parentleft = activeLinkRef.parentElement.getBoundingClientRect().left
+                }
+                // parentleft = activeLinkRef?.parentElement?.getBoundingClientRect().left;
 
-
-                setLeft(left - activeLinkRef?.parentElement?.getBoundingClientRect().left)
+                setLeft(left - parentleft)
                 setWidth(width)
 
             }
