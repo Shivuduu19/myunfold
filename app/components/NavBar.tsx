@@ -105,13 +105,13 @@ const NavBar = () => {
         }
     }
 
-    function ontap(e) {
-        console.log(e);
-        e.preventDefault()
-        console.log('shiva');
+    // function ontap(e) {
+    //     console.log(e);
+    //     e.preventDefault()
+    //     console.log('shiva');
 
 
-    }
+    // }
     function handleClick(e: any) {
         // e.preventDefault()
         console.log(e.target.parentElement);
