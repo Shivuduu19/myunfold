@@ -20,6 +20,12 @@ body {
   line-height: 1;
 }
 
+@media screen and (min-width: 1700px) {
+  body {
+    font-size: 18.88888888888889px;
+  }
+}
+
 body::-webkit-scrollbar {
   display: none;
 }

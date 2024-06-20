@@ -47,11 +47,11 @@ const Header = () => {
     return (
         <div className='h-[5.75em] mb-[2em] z-[997] relative flex'>
 
-            <div className='w-full max-w-[1700px] px-[4.375em]'>
+            <div className='w-full mx-auto max-w-[1700px] flex items-start justify-end px-[4.375em]'>
 
-                <motion.div className='flex betmt:h-auto justify-between w-full h-full items-center'>
-                    <motion.a whileHover='hover' href="" className=' mobile:w-[22em] betmt:w-[15em] w-[9.7em] max-w-full flex relative'>
-                        <Image src={logo} alt='' className='z-[2] relative' />
+                <motion.div className='flex flex-1 betmt:h-auto justify-between w-full h-full items-center '>
+                    <motion.a whileHover='hover' href="" className='  betmt:w-[15em] w-[9.7em] max-w-full flex relative'>
+                        <Image src={logo} alt='' className='z-[2] relative w-full' />
                         <div className='absolute left-[0%]  w-[30%] h-[150%] bottom-[0.2em] rounded-b-[100vw] flex flex-col overflow-hidden '>
                             <motion.div variants={headAnim} style={{ y: '75%' }} className='  w-full'>
                                 <div>
