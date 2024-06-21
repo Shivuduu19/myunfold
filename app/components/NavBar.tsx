@@ -90,7 +90,7 @@ const NavBar = () => {
         }, 1000);
     }
 
-    // console.log(width, left);
+    console.log(width, left);
 
     return (
         <div className="z-[997] flex flex-col items-center pb-[2em] fixed  bottom-[0%] left-[0%] right-[0%] top-auto">

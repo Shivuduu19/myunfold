@@ -12,17 +12,17 @@ const Footer = () => {
 
             <div className="flex items-center w-full pt-[7.75em] pb-[8.75em] ">
                 <div className="flex overflow-hidden  gap-[7.5em] flex-none justify-start items-stretch w-full whitespace-nowrap  ">
-                    <div className="">
+                    <div className="animate-scroll">
                         <p className="leading-[1.1] tracking-[-0.04em] text-[10em] font-normal  my-0">
                             We make things More Yummy™
                         </p>
                     </div>
-                    <div className="">
+                    <div className="animate-scroll">
                         <p className="leading-[1.1] tracking-[-0.04em] text-[10em] font-normal  my-0">
                             We make things More Yummy™
                         </p>
                     </div>
-                    <div className="">
+                    <div className="animate-scroll">
                         <p className="leading-[1.1] tracking-[-0.04em] text-[10em] font-normal  my-0">
                             We make things More Yummy™
                         </p>

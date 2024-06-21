@@ -13,6 +13,15 @@ const config: Config = {
       'mobile': { 'max': '479px' },
     },
     extend: {
+      animation: {
+        scroll: 'scroll 20s linear infinite'
+      },
+      keyframes: {
+        scroll: {
+          'from': { transform: 'translateX(0)' },
+          'to': { transform: 'translateX(calc(-100% - 5em))' }
+        }
+      },
       fontFamily: {
         fk: ['var(--font-fk)'],
         fkAlt: ['var(--font-fkAlt)'],
