@@ -32,72 +32,94 @@ const NavBar = () => {
 
     useEffect(() => {
         // Update indicator size on initial render and link clicks
-        const updateIndicatorSize = () => {
-            const activeLinkRef: HTMLAnchorElement | undefined = itemsRef.current.find((ref) => ref.pathname === activeLink);
-            // console.log(activeLinkRef);
-            setLinkClick(false)
+        // const updateIndicatorSize = () => {
+        //     const activeLinkRef: HTMLAnchorElement | undefined = itemsRef.current.find((ref) => ref.pathname === activeLink);
+        //     // console.log(activeLinkRef);
 
 
-            if (activeLinkRef) {
+        //     if (activeLinkRef) {
 
-                const { width, left } = activeLinkRef.getBoundingClientRect();
-                const prevEle = activeLinkRef.previousElementSibling?.getBoundingClientRect()
-
-
-                let parentleft: number = 0
-                if (activeLinkRef.parentElement) {
-                    parentleft = activeLinkRef.parentElement.getBoundingClientRect().left
-                }
+        //         const { width, left } = activeLinkRef.getBoundingClientRect();
+        //         const prevEle = activeLinkRef.previousElementSibling?.getBoundingClientRect()
 
 
-                setLeft(left - parentleft)
-                setWidth(width)
+        //         let parentleft: number = 0
+        //         if (activeLinkRef.parentElement) {
+        //             parentleft = activeLinkRef.parentElement.getBoundingClientRect().left
+        //         }
+
+
+        //         setLeft(left - parentleft)
+        //         setWidth(width)
 
 
 
-            }
-        };
+        //     }
+        // };
+        handleClickLink()
 
-        updateIndicatorSize();
-        window.addEventListener('resize', updateIndicatorSize); // Update on resize
+        // setLinkClick(false)
+        // updateIndicatorSize();
+        window.addEventListener('resize', handleClickLink); // Update on resize
 
-        return () => window.removeEventListener('resize', updateIndicatorSize);
+        return () => window.removeEventListener('resize', handleClickLink);
     }, [activeLink]);
 
+    function handleClickLink() {
+        // e.preventDefault() 
+        const activeLinkRef: HTMLAnchorElement | undefined = itemsRef.current.find((ref) => ref.pathname === activeLink);
+        if (activeLinkRef) {
+
+            const { width, left } = activeLinkRef.getBoundingClientRect();
+            const prevEle = activeLinkRef.previousElementSibling?.getBoundingClientRect()
+
+
+            let parentleft: number = 0
+            if (activeLinkRef.parentElement) {
+                parentleft = activeLinkRef.parentElement.getBoundingClientRect().left
+            }
+
+
+            setLeft(left - parentleft)
+            setWidth(width)
 
 
 
+        }
 
 
-    function handleClick(e: any) {
-        e.preventDefault()
-        setLinkClick(true)
-        // console.log(e.target.parentElement);
-        const parentLeft = e.target.parentElement.parentElement.getBoundingClientRect().left
-        // console.log(parentLeft);
-        // e.target.previousElementSibling.style.opacity = 1
-        // setTimeout(() => {
-        //     e.target.parentElement.previousElementSibling.firstChild.style.opacity = 0
-
-        // }, 500)
-        const { width, left } = e.target.parentElement.getBoundingClientRect()
-        // console.log(left);
-
-        setWidth(width)
-        setLeft(left - parentLeft)
-        setTimeout(() => {
-            window.location.href = e.target.parentElement.href;
-        }, 1000);
     }
 
-    // console.log(width, left);
+
+
+
+    // function handleClick(e: any) {
+    //     e.preventDefault()
+    //     console.log(e.target.parentElement.tagName);
+
+    //     if (e.target.parentElement.tagName === 'A') {
+    //         setLinkClick(true)
+    //         const parentLeft = e.target.parentElement.parentElement.getBoundingClientRect().left
+    //         const { width, left } = e.target.parentElement.getBoundingClientRect()
+    //         setWidth(width)
+    //         setLeft(left - parentLeft)
+
+    //         setTimeout(() => {
+    //             window.location.href = e.target.parentElement.href;
+    //         }, 1000);
+    //     }
+
+
+    // }
+
+    console.log(width, left);
 
     return (
         <div className="z-[997] flex flex-col items-center pb-[2em] fixed  bottom-[0%] left-[0%] right-[0%] top-auto">
-            <div className="max-w-full rounded-[100vw] mobile:text-[3vw] p-[.75em] bg-[#fff] shadow-[0em_.5em_1em_-.5em_rgba(5,7,15,0.2)]">
+            <div className="max-w-full rounded-[100vw] mobile:text-[3vw] p-[.75em] bg-[#fff] shadow-[0em_.5em_1em_-.5em_rgba(118, 121, 131, 0.2)]">
                 <div className="relative">
                     <motion.a href="/"
-                        onClick={(e) => handleClick(e)} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
+                        onClick={(e) => handleClickLink()} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
                             const arr = getRefs()
                             if (node) {
                                 arr.push(node)
@@ -106,7 +128,7 @@ const NavBar = () => {
                         <motion.div className="opacity-0 z-[1] bg-[#fff] rounded-[100vw] absolute top-[0%] bottom-[0%] right-[0%] left-[0%]"></motion.div>
                         <p className="z-[2] uppercase mix-blend-difference text-[1em] leading-[1] relative" >Home</p>
                     </motion.a>
-                    <motion.a href="/work" onClick={(e) => handleClick(e)} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
+                    <motion.a href="/work" onClick={(e) => handleClickLink()} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
                         const arr = getRefs()
                         if (node) {
                             arr.push(node)
@@ -117,7 +139,7 @@ const NavBar = () => {
                     </motion.a>
 
 
-                    <motion.a href="/about" onClick={(e) => handleClick(e)} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
+                    <motion.a href="/about" onClick={(e) => handleClickLink()} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
                         const arr = getRefs()
                         if (node) {
                             arr.push(node)
@@ -128,7 +150,7 @@ const NavBar = () => {
                     </motion.a>
 
 
-                    <motion.a href="/" onClick={(e) => handleClick(e)} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
+                    <motion.a href="/" onClick={(e) => handleClickLink()} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
                         const arr = getRefs()
                         if (node) {
                             arr.push(node)
