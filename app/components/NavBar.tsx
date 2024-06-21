@@ -175,7 +175,7 @@ const NavBar = () => {
                         <div className="opacity-0 z-[1] bg-[#fff] rounded-[100vw] absolute top-[0%] bottom-[0%] right-[0%] left-[0%]"></div>
                         <p className="z-[2] uppercase mix-blend-difference text-[1em] leading-[1] relative">about</p>
                     </motion.a>
-                    <motion.a href="" onClick={(e) => handleClick(e)} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
+                    <motion.a href="/" onClick={(e) => handleClick(e)} className="z-[2] text-[#fff] mix-blend-difference pt-[.8em] px-[1.625em] pb-[.7em] relative max-w-full inline-block " ref={node => {
                         const arr = getRefs()
                         if (node) {
                             arr.push(node)
