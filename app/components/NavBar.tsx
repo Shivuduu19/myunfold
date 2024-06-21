@@ -125,7 +125,7 @@ const NavBar = () => {
 
     // }
     function handleClick(e: any) {
-        // e.preventDefault()
+        e.preventDefault()
         setLinkClick(true)
         console.log(e.target.parentElement);
         const parentLeft = e.target.parentElement.parentElement.getBoundingClientRect().left
@@ -136,6 +136,9 @@ const NavBar = () => {
 
         setWidth(width)
         setLeft(left - parentLeft)
+        setTimeout(() => {
+            window.location.href = e.target.parentElement.href;
+        }, 1000);
     }
 
     console.log(width, left);
