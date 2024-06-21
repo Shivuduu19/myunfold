@@ -182,7 +182,7 @@ const NavBar = () => {
                         <p className="z-[2] uppercase mix-blend-difference text-[1em] leading-[1] relative">contact</p>
                     </motion.a>
                     <motion.div style={linkClick ? { left: left, width: width, opacity: 1, transition: 'all 500ms ease 0s', justifyContent: "flex-end" } : { left: left, width: width, opacity: 1 }} className={`z-[1] w-[6.4em]  flex justify-start absolute top-[0%] bottom-[0%] right-auto overflow-hidden opacity-0 translate-x-0`}>
-                        <motion.div style={linkClick ? { transition: 'width 250ms ease 0s' } : {}} className="bg-[#05070f] rounded-[100vw] flex-1 w-full h-full relative"></motion.div>
+                        <motion.div style={linkClick ? { transition: 'width 250ms ease 0s', width: '140%' } : {}} className="bg-[#05070f] rounded-[100vw] flex-1 w-full h-full relative"></motion.div>
                     </motion.div>
                 </div>
             </div>
