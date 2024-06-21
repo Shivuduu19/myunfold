@@ -8,6 +8,7 @@ const NavBar = () => {
     const [width, setWidth] = useState(89.6)
     const [prevElLeft, setPrevEleLeft] = useState(0)
     const [prevElWidth, setPrevEleWidth] = useState(0)
+    const [linkClick, setLinkClick] = useState(false)
 
     const itemsRef = useRef<HTMLAnchorElement[]>([])
     const [activeLink, setActiveLink] = useState("");
@@ -33,8 +34,8 @@ const NavBar = () => {
         // Update indicator size on initial render and link clicks
         const updateIndicatorSize = () => {
             const activeLinkRef: HTMLAnchorElement | undefined = itemsRef.current.find((ref) => ref.pathname === activeLink);
-            // console.log(activeLinkRef?.getBoundingClientRect());
-
+            console.log(activeLinkRef);
+            setLinkClick(false)
 
 
             if (activeLinkRef) {
@@ -48,13 +49,16 @@ const NavBar = () => {
                     parentleft = activeLinkRef.parentElement.getBoundingClientRect().left
                 }
                 // parentleft = activeLinkRef?.parentElement?.getBoundingClientRect().left;
-                if (prevEle) {
-                    setPrevEleWidth(prevEle.width)
-                    setPrevEleLeft(prevEle.left - parentleft)
+                // if (prevEle) {
+                //     setPrevEleWidth(prevEle.width)
+                //     setPrevEleLeft(prevEle.left - parentleft)
 
-                }
+                // }
+
                 setLeft(left - parentleft)
                 setWidth(width)
+
+
 
             }
         };
@@ -63,7 +67,7 @@ const NavBar = () => {
         window.addEventListener('resize', updateIndicatorSize); // Update on resize
 
         return () => window.removeEventListener('resize', updateIndicatorSize);
-    }, [activeLink, itemsRef]);
+    }, [activeLink]);
 
 
 
@@ -87,21 +91,29 @@ const NavBar = () => {
 
     // })
     const diff = left - prevElLeft
+
+    const staicdivAnim = {
+        initial: {
+            left: left,
+            width: width
+        },
+        animate: {
+            left: left,
+            width: width
+        }
+    }
     const divanim = {
         initial: {
             left: prevElLeft,
             width: prevElWidth,
-            transition: {
-                duration: 0.5
-            }
+            opacity: 1
+
         },
         animate: {
             // x: diff,
             left: left,
             width: width,
-            transition: {
-                duration: 0.5
-            }
+            opacity: 1
         }
     }
 
@@ -114,6 +126,7 @@ const NavBar = () => {
     // }
     function handleClick(e: any) {
         // e.preventDefault()
+        setLinkClick(true)
         console.log(e.target.parentElement);
         const parentLeft = e.target.parentElement.parentElement.getBoundingClientRect().left
         console.log(parentLeft);
@@ -168,8 +181,8 @@ const NavBar = () => {
                         <div className="opacity-0 z-[1] bg-[#fff] rounded-[100vw] absolute top-[0%] bottom-[0%] right-[0%] left-[0%]"></div>
                         <p className="z-[2] uppercase mix-blend-difference text-[1em] leading-[1] relative">contact</p>
                     </motion.a>
-                    <motion.div initial='initial' animate='animate' transition={{ duration: 0.5, ease: 'ease' }} variants={divanim} className={`z-[1] opacity-1  flex justify-start absolute top-[0%] bottom-[0%] right-auto overflow-hidden`}>
-                        <div className="bg-[#05070f] rounded-[100vw] flex-1 w-full h-full relative"></div>
+                    <motion.div style={linkClick ? { left: left, width: width, opacity: 1, transition: 'all 500ms ease 0s', justifyContent: "flex-end" } : { left: left, width: width, opacity: 1 }} className={`z-[1] w-[6.4em]  flex justify-start absolute top-[0%] bottom-[0%] right-auto overflow-hidden opacity-0 translate-x-0`}>
+                        <motion.div style={linkClick ? { transition: 'width 250ms ease 0s' } : {}} className="bg-[#05070f] rounded-[100vw] flex-1 w-full h-full relative"></motion.div>
                     </motion.div>
                 </div>
             </div>

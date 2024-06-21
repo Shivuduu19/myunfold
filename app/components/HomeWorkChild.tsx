@@ -57,7 +57,7 @@ const HomeWorkChild = ({ protitle, desc, src, handleTap, selectedBox, boxIndex }
                 </div>
             </div> */}
             <motion.div className='cursor-pointer rounded-[2.5em] flex-col justify-center items-center h-[32em] flex relative overflow-hidden'>
-                <Image src={src} alt='' fill layout='fill' objectFit='cover' className='w-[54em] flex-none max-w-none absolute  ' />
+                <Image src={src} alt='' objectFit='cover' className='w-[54em] flex-none max-w-none absolute  ' />
                 <div className='rounded-[100vw] mobile:max-w-[70px] betmt:max-w-[100px] tablet:max-w-[150px] max-w-[11em] absolute bottom-[2em] right-[2em] overflow-hidden '>
                     <motion.div style={{ scale: 0 }} transition={{ duration: 0.3, }} animate={selected ? { scale: 1 } : ''} className='origin-[100%_100%]' >
                         <a href="" className='bg-[#fff] text-[#05070f] flex gap-[1em] rounded-[100vw] justify-center items-center px-[2.5em] py-[1em] max-w-full'>
