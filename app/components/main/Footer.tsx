@@ -11,8 +11,8 @@ const Footer = () => {
             <div className=" bg-[#e8f0f9] rounded-br-[3.5em] rounded-bl-[3.5em] h-[5.5em]"></div>
 
             <div className="flex items-center w-full pt-[7.75em] pb-[8.75em] ">
-                <div className="flex overflow-hidden  gap-[7.5em] flex-none justify-start items-stretch w-full whitespace-nowrap  ">
-                    <div className="animate-scroll">
+                <div className="flex overflow-hidden  gap-[100px] flex-none justify-start items-stretch w-full whitespace-nowrap  ">
+                    <div className="animate-scroll pl-[100px]">
                         <p className="leading-[1.1] tracking-[-0.04em] text-[10em] font-normal  my-0">
                             We make things More Yummy™
                         </p>
@@ -23,7 +23,7 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className="animate-scroll">
-                        <p className="leading-[1.1] tracking-[-0.04em] text-[10em] font-normal  my-0">
+                        <p className="leading-[1.1] tracking-[-0.04em] text-[10em] font-normal  my-0 ">
                             We make things More Yummy™
                         </p>
                     </div>
